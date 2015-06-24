@@ -71,22 +71,26 @@ declare -a sequences=(
 # echo ${#sequences[@]} #Number of elements in the array
 
 # Downloading sequences
-for (( i=0; i!=${#sequences[@]}; ++i ))
-do
-  if [ ! -e ${sequences[i]}.fasta ]
-  then
-    echo Downloading: ${sequences[i]}
-    perl ncbi_search.pl -q ${sequences[i]} -o ${sequences[i]}.fasta -d nucleotide -r fasta -m 2000
-  fi
-done
-
-# Merging sequences
-if [ ! -e Sequences.fasta ]
+if [ ! e Sequences.fasta ]
 then
-  for myfile in `ls *.fasta`
+  for (( i=0; i!=${#sequences[@]}; ++i ))
   do
-    cat $myfile >> Sequences.fasta
+    if [ ! -e ${sequences[i]}.fasta ]
+    then
+      echo Downloading: ${sequences[i]}
+      perl ncbi_search.pl -q ${sequences[i]} -o ${sequences[i]}.fasta -d nucleotide -r fasta -m 2000
+    fi
   done
+
+  # Merging sequences
+  if [ ! -e Sequences.fasta ]
+  then
+    for myfile in `ls *.fasta`
+    do
+      cat $myfile >> Sequences.fasta
+      rm $myfile
+    done
+  fi
 fi
 
 # Download MUSCLE
