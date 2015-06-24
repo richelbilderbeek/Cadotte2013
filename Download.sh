@@ -110,3 +110,8 @@ then
   cd MUSCLE
   chmod +x muscle3.8.31_i86linux32
 fi
+
+if [ ! -d jmodeltest2 ]
+then
+  git clone https://github.com/ddarriba/jmodeltest2.git
+fi
