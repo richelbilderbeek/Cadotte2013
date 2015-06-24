@@ -114,4 +114,6 @@ fi
 if [ ! -d jmodeltest2 ]
 then
   git clone https://github.com/ddarriba/jmodeltest2.git
+  cd jmodeltest2
+  ant jar
 fi
