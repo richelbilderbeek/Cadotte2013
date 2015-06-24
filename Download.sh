@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Downloads all gene sequences used in the article
+
 declare -a sequences=(
   'GU381745'
   'HQ590061'
@@ -63,12 +65,13 @@ declare -a sequences=(
   'FJ040168'
 );
 
-echo "Sequences:"
-echo ${sequences[@]}
-echo "Number of sequences:"
-echo ${#sequences[@]} #Number of elements in the array
+# echo "Sequences:"
+# echo ${sequences[@]}
+# echo "Number of sequences:"
+# echo ${#sequences[@]} #Number of elements in the array
 
-perl ncbi_search.pl -q ${sequences[1]} -o ${sequences[1]}.fasta -d nucleotide -r fasta -m 2000
-
-
-
+for (( i=0; i!=${#sequences[@]}; ++i ))
+do
+  echo item: ${sequences[i]}
+  perl ncbi_search.pl -q ${sequences[i]} -o ${sequences[i]}.fasta -d nucleotide -r fasta -m 2000
+done
