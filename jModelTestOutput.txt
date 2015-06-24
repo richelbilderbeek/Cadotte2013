@@ -1,0 +1,1693 @@
+-------------------------- jModeltest 2.1.7 v20150220 --------------------------
+(c) 2011-onwards D. Darriba, G.L. Taboada, R. Doallo and D. Posada,
+(1) Department of Biochemistry, Genetics and Immunology
+    University of Vigo, 36310 Vigo, Spain.
+(2) Department of Electronics and Systems
+    University of A Coruna, 15071 A Coruna, Spain.
+e-mail: ddarriba@udc.es, dposada@uvigo.es
+--------------------------------------------------------------------------------
+ 
+Wed Jun 24 14:05:11 CEST 2015
+Linux 3.13.0-49-generic, arch: amd64, bits: 64, numcores: 4
+ 
+jModelTest 2.1.7 v20150220
+Copyright (C) 2011 D. Darriba, G.L. Taboada, R. Doallo and D. Posada
+This program comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it under certain conditions
+ 
+Notice: This program may contain errors. Please inspect results carefully.
+ 
+--------------------------------------------------------------------------------
+Citation: Darriba D, Taboada GL, Doallo R and Posada D. 2012.
+          "jModelTest 2: more models, new heuristics and parallel computing".
+          Nature Methods 9(8), 772.
+--------------------------------------------------------------------------------
+ 
+Reading data file "Sequences.afa"... OK.
+  number of sequences: 28
+  number of sites: 2609
+ 
+ 
+---------------------------------------------------------------
+*                                                             *
+*        COMPUTATION OF LIKELIHOOD SCORES WITH PHYML          *
+*                                                             *
+---------------------------------------------------------------
+ 
+::Settings::
+ 
+ Phyml version = 3.0
+ Phyml binary = PhyML_3.0_linux64
+ Phyml path = /home/p230198/GitHubs/Cadotte2013/jmodeltest2/dist/exe/phyml/
+ Candidate models = 88
+   number of substitution schemes = 11
+   including models with equal/unequal base frequencies (+F)
+   including models with/without a proportion of invariable sites (+I)
+   including models with/without rate variation among sites (+G) (nCat = 4)
+ Optimized free parameters (K) = substitution parameters + 53 branch lengths + topology 
+ Base tree for likelihood calculations = ML tree
+ Tree topology search operation = NNI
+ 
+ 
+::Progress::
+ 
+Model 		 Exec. Time 	 Total Time 	 -lnL
+-------------------------------------------------------------------------
+TPM1uf+I+G		00h:00:31:05	00h:00:32:06	15452.6980
+HKY+I+G		00h:00:32:08	00h:00:33:09	15453.0416
+F81+I+G		00h:00:50:00	00h:00:51:01	15582.3785
+TPM2uf+I+G		00h:00:31:07	00h:01:04:03	15449.6660
+TrN+I+G		00h:01:16:05	00h:01:17:06	15440.0042
+TIM1+I+G		00h:00:56:00	00h:01:47:01	15439.6566
+TPM3uf+I+G		00h:01:18:05	00h:01:52:05	15438.7555
+TIM2+I+G		00h:00:55:05	00h:01:59:09	15436.7636
+TIM3+I+G		00h:01:19:00	00h:02:36:06	15426.1138
+JC+I+G		00h:00:44:03	00h:02:44:03	15641.5341
+TVM+I+G		00h:01:18:01	00h:03:05:02	15434.4279
+K80+I+G		00h:00:31:00	00h:03:07:07	15510.1628
+GTR+I+G		00h:01:18:09	00h:03:11:04	15421.5547
+TrNef+I+G		00h:00:32:01	00h:03:16:03	15493.1251
+TPM1+I+G		00h:00:31:02	00h:03:36:05	15509.8686
+TPM2+I+G		00h:00:31:01	00h:03:38:08	15510.0465
+TPM3+I+G		00h:00:31:08	00h:03:43:02	15508.9796
+TIM1ef+I+G		00h:00:32:01	00h:03:48:05	15493.0648
+TIM2ef+I+G		00h:00:31:06	00h:04:08:01	15493.2592
+TIM3ef+I+G		00h:00:31:03	00h:04:10:02	15491.6692
+TVMef+I+G		00h:00:32:07	00h:04:16:00	15508.7780
+SYM+I+G		00h:00:32:08	00h:04:21:04	15491.4848
+TrN+G		00h:00:28:00	00h:04:44:03	15439.9074
+TPM1uf+G		00h:00:26:09	00h:04:48:05	15452.0843
+HKY+G		00h:00:44:02	00h:04:54:05	15452.3491
+F81+G		00h:01:13:07	00h:05:21:09	15582.3745
+TPM2uf+G		00h:00:43:02	00h:05:27:08	15449.1146
+TPM3uf+G		00h:01:00:09	00h:05:49:06	15438.1160
+TIM3+G		00h:00:27:03	00h:05:55:02	15425.4782
+TIM2+G		00h:00:46:07	00h:06:08:08	15437.0498
+TIM1+G		00h:01:21:05	00h:06:16:03	15439.6501
+GTR+G		00h:00:31:04	00h:06:26:08	15421.0792
+TVM+G		00h:01:03:02	00h:06:53:00	15433.9318
+K80+G		00h:00:41:06	00h:06:58:01	15510.1562
+TrNef+G		00h:00:32:04	00h:06:59:04	15493.2636
+JC+G		00h:00:51:07	00h:07:00:07	15641.5296
+TIM1ef+G		00h:00:36:09	00h:07:37:09	15493.0612
+TPM1+G		00h:00:47:05	00h:07:40:08	15509.9503
+TPM2+G		00h:00:46:09	00h:07:45:01	15510.1366
+TPM3+G		00h:01:05:07	00h:08:05:04	15508.9730
+TIM2ef+G		00h:00:30:09	00h:08:09:01	15493.2554
+TIM3ef+G		00h:00:48:07	00h:08:29:05	15491.6633
+TVMef+G		00h:00:47:08	00h:08:32:09	15508.9473
+F81+I		00h:00:25:01	00h:08:34:03	15628.9435
+HKY+I		00h:00:25:05	00h:08:55:01	15507.2622
+SYM+G		00h:00:50:07	00h:08:56:01	15491.4792
+TPM1uf+I		00h:00:28:07	00h:09:03:00	15506.7632
+TrN+I		00h:00:30:07	00h:09:03:06	15495.1265
+TPM3uf+I		00h:00:07:08	00h:09:03:09	15497.0028
+TIM3+I		00h:00:14:08	00h:09:18:07	15486.3102
+TPM2uf+I		00h:00:28:00	00h:09:23:02	15504.0469
+TIM2+I		00h:00:28:03	00h:09:32:00	15491.4595
+TIM1+I		00h:00:29:03	00h:09:32:03	15494.6364
+K80+I		00h:00:08:08	00h:09:41:01	15569.2513
+JC+I		00h:00:22:01	00h:09:54:01	15690.8384
+TVM+I		00h:00:36:05	00h:09:55:02	15490.5616
+GTR+I		00h:00:37:05	00h:10:00:07	15478.7965
+TrNef+I		00h:00:20:09	00h:10:02:00	15552.3660
+TPM2+I		00h:00:09:07	00h:10:04:09	15569.2157
+TPM1+I		00h:00:14:04	00h:10:08:05	15568.9007
+TPM3+I		00h:00:15:02	00h:10:15:09	15568.2315
+TIM1ef+I		00h:00:20:05	00h:10:22:05	15552.0465
+TIM2ef+I		00h:00:20:04	00h:10:25:04	15552.3008
+TIM3ef+I		00h:00:20:06	00h:10:29:02	15551.1600
+TVMef+I		00h:00:16:01	00h:10:32:00	15567.7705
+SYM+I		00h:00:20:04	00h:10:42:09	15550.8002
+F81		00h:00:26:07	00h:10:52:01	15640.8656
+TrN		00h:00:26:02	00h:10:58:02	15506.6442
+HKY		00h:00:29:04	00h:10:58:06	15519.4851
+TPM2uf		00h:00:12:02	00h:11:04:03	15517.5111
+TPM1uf		00h:00:25:01	00h:11:08:00	15519.0366
+TIM1		00h:00:27:06	00h:11:26:02	15506.2060
+TPM3uf		00h:00:28:02	00h:11:26:04	15506.1786
+TIM2		00h:00:27:07	00h:11:32:00	15503.3511
+TIM3		00h:00:29:02	00h:11:37:03	15494.0341
+TVM		00h:00:15:01	00h:11:41:03	15503.2214
+JC		00h:00:12:05	00h:11:44:05	15703.3807
+K80		00h:00:07:09	00h:11:45:02	15582.6517
+TrNef		00h:00:08:04	00h:11:49:07	15566.8101
+TPM1		00h:00:07:08	00h:11:52:03	15582.3082
+TPM2		00h:00:07:08	00h:11:53:01	15582.5236
+GTR		00h:00:29:03	00h:11:55:07	15489.5379
+TPM3		00h:00:08:00	00h:11:57:07	15581.4240
+TIM1ef		00h:00:08:04	00h:12:00:07	15566.4759
+TIM2ef		00h:00:08:02	00h:12:01:04	15566.7034
+TVMef		00h:00:09:01	00h:12:06:09	15580.9731
+TIM3ef		00h:00:12:08	00h:12:08:06	15564.9629
+SYM		00h:00:09:01	00h:12:09:09	15564.7918
+ 
+::Results::
+ 
+   Model = JC
+   partition = 000000
+   -lnL = 15703.3807
+   K = 54 
+ 
+   Model = JC+I
+   partition = 000000
+   -lnL = 15690.8384
+   K = 55
+   p-inv = 0.0220 
+ 
+   Model = JC+G
+   partition = 000000
+   -lnL = 15641.5296
+   K = 55
+   gamma shape = 3.0580 
+ 
+   Model = JC+I+G
+   partition = 000000
+   -lnL = 15641.5341
+   K = 56
+   p-inv = 0.0000
+   gamma shape = 3.0580 
+ 
+   Model = F81
+   partition = 000000
+   -lnL = 15640.8656
+   K = 57
+   freqA = 0.2665 
+   freqC = 0.2184 
+   freqG = 0.2137 
+   freqT = 0.3014  
+ 
+   Model = F81+I
+   partition = 000000
+   -lnL = 15628.9435
+   K = 58
+   freqA = 0.2664 
+   freqC = 0.2191 
+   freqG = 0.2134 
+   freqT = 0.3011 
+   p-inv = 0.0220 
+ 
+   Model = F81+G
+   partition = 000000
+   -lnL = 15582.3745
+   K = 58
+   freqA = 0.2643 
+   freqC = 0.2202 
+   freqG = 0.2147 
+   freqT = 0.3008 
+   gamma shape = 3.0770 
+ 
+   Model = F81+I+G
+   partition = 000000
+   -lnL = 15582.3785
+   K = 59
+   freqA = 0.2643 
+   freqC = 0.2202 
+   freqG = 0.2147 
+   freqT = 0.3009 
+   p-inv = 0.0000
+   gamma shape = 3.0800 
+ 
+   Model = K80
+   partition = 010010
+   -lnL = 15582.6517
+   K = 55
+   kappa = 2.0317 (ti/tv = 1.0158) 
+ 
+   Model = K80+I
+   partition = 010010
+   -lnL = 15569.2513
+   K = 56
+   kappa = 2.0653 (ti/tv = 1.0326)
+   p-inv = 0.0230 
+ 
+   Model = K80+G
+   partition = 010010
+   -lnL = 15510.1562
+   K = 56
+   kappa = 2.2264 (ti/tv = 1.1132)
+   gamma shape = 2.7010 
+ 
+   Model = K80+I+G
+   partition = 010010
+   -lnL = 15510.1628
+   K = 57
+   kappa = 2.2269 (ti/tv = 1.1134)
+   p-inv = 0.0000
+   gamma shape = 2.7010 
+ 
+   Model = HKY
+   partition = 010010
+   -lnL = 15519.4850
+   K = 58
+   freqA = 0.2650 
+   freqC = 0.2189 
+   freqG = 0.2140 
+   freqT = 0.3021 
+   kappa = 2.0539 (ti/tv = 1.0110) 
+ 
+   Model = HKY+I
+   partition = 010010
+   -lnL = 15507.2622
+   K = 59
+   freqA = 0.2652 
+   freqC = 0.2197 
+   freqG = 0.2138 
+   freqT = 0.3013 
+   kappa = 2.0701 (ti/tv = 1.0194)
+   p-inv = 0.0220 
+ 
+   Model = HKY+G
+   partition = 010010
+   -lnL = 15452.3491
+   K = 59
+   freqA = 0.2634 
+   freqC = 0.2209 
+   freqG = 0.2155 
+   freqT = 0.3003 
+   kappa = 2.2270 (ti/tv = 1.0983)
+   gamma shape = 2.7720 
+ 
+   Model = HKY+I+G
+   partition = 010010
+   -lnL = 15453.0416
+   K = 60
+   freqA = 0.2634 
+   freqC = 0.2205 
+   freqG = 0.2158 
+   freqT = 0.3002 
+   kappa = 2.2079 (ti/tv = 1.0887)
+   p-inv = 0.0000
+   gamma shape = 2.8180 
+ 
+   Model = TrNef
+   partition = 010020
+   -lnL = 15566.8101
+   K = 56
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.6862
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.4084
+   R(f) [GT] =  1.0000 
+ 
+   Model = TrNef+I
+   partition = 010020
+   -lnL = 15552.3660
+   K = 57
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.6994
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.4778
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TrNef+G
+   partition = 010020
+   -lnL = 15493.2636
+   K = 57
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7855
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.7330
+   R(f) [GT] =  1.0000
+   gamma shape = 2.6730 
+ 
+   Model = TrNef+I+G
+   partition = 010020
+   -lnL = 15493.1251
+   K = 58
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7966
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.7503
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.6800 
+ 
+   Model = TrN
+   partition = 010020
+   -lnL = 15506.6442
+   K = 59
+   freqA = 0.2743 
+   freqC = 0.2124 
+   freqG = 0.2210 
+   freqT = 0.2923 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7025
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.4292
+   R(f) [GT] =  1.0000 
+ 
+   Model = TrN+I
+   partition = 010020
+   -lnL = 15495.1265
+   K = 60
+   freqA = 0.2743 
+   freqC = 0.2135 
+   freqG = 0.2207 
+   freqT = 0.2916 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7183
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.4461
+   R(f) [GT] =  1.0000
+   p-inv = 0.0220 
+ 
+   Model = TrN+G
+   partition = 010020
+   -lnL = 15439.9074
+   K = 60
+   freqA = 0.2736 
+   freqC = 0.2136 
+   freqG = 0.2232 
+   freqT = 0.2896 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7937
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.7160
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7680 
+ 
+   Model = TrN+I+G
+   partition = 010020
+   -lnL = 15440.0042
+   K = 61
+   freqA = 0.2735 
+   freqC = 0.2133 
+   freqG = 0.2235 
+   freqT = 0.2898 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7597
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.6912
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.8850 
+ 
+   Model = TPM1
+   partition = 012210
+   -lnL = 15582.3082
+   K = 56
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.0986
+   R(c) [AT] =  1.0653
+   R(d) [CG] =  1.0653
+   R(e) [CT] =  2.0986
+   R(f) [GT] =  1.0000 
+ 
+   Model = TPM1+I
+   partition = 012210
+   -lnL = 15568.9007
+   K = 57
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.1359
+   R(c) [AT] =  1.0673
+   R(d) [CG] =  1.0673
+   R(e) [CT] =  2.1359
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TPM1+G
+   partition = 012210
+   -lnL = 15509.9503
+   K = 57
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.2883
+   R(c) [AT] =  1.0566
+   R(d) [CG] =  1.0566
+   R(e) [CT] =  2.2883
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7050 
+ 
+   Model = TPM1+I+G
+   partition = 012210
+   -lnL = 15509.8686
+   K = 58
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.3024
+   R(c) [AT] =  1.0554
+   R(d) [CG] =  1.0554
+   R(e) [CT] =  2.3024
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.7100 
+ 
+   Model = TPM1uf
+   partition = 012210
+   -lnL = 15519.0366
+   K = 59
+   freqA = 0.2651 
+   freqC = 0.2188 
+   freqG = 0.2139 
+   freqT = 0.3022 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.1318
+   R(c) [AT] =  1.0752
+   R(d) [CG] =  1.0752
+   R(e) [CT] =  2.1318
+   R(f) [GT] =  1.0000 
+ 
+   Model = TPM1uf+I
+   partition = 012210
+   -lnL = 15506.7632
+   K = 60
+   freqA = 0.2653 
+   freqC = 0.2196 
+   freqG = 0.2138 
+   freqT = 0.3014 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.1547
+   R(c) [AT] =  1.0806
+   R(d) [CG] =  1.0806
+   R(e) [CT] =  2.1547
+   R(f) [GT] =  1.0000
+   p-inv = 0.0220 
+ 
+   Model = TPM1uf+G
+   partition = 012210
+   -lnL = 15452.0843
+   K = 60
+   freqA = 0.2634 
+   freqC = 0.2208 
+   freqG = 0.2154 
+   freqT = 0.3003 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.2981
+   R(c) [AT] =  1.0648
+   R(d) [CG] =  1.0648
+   R(e) [CT] =  2.2981
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7780 
+ 
+   Model = TPM1uf+I+G
+   partition = 012210
+   -lnL = 15452.6980
+   K = 61
+   freqA = 0.2634 
+   freqC = 0.2205 
+   freqG = 0.2158 
+   freqT = 0.3003 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  2.2876
+   R(c) [AT] =  1.0732
+   R(d) [CG] =  1.0732
+   R(e) [CT] =  2.2876
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.8240 
+ 
+   Model = TPM2
+   partition = 010212
+   -lnL = 15582.5236
+   K = 56
+   R(a) [AC] =  0.9675
+   R(b) [AG] =  1.9992
+   R(c) [AT] =  0.9675
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  1.9992
+   R(f) [GT] =  1.0000 
+ 
+   Model = TPM2+I
+   partition = 010212
+   -lnL = 15569.2157
+   K = 57
+   R(a) [AC] =  0.9626
+   R(b) [AG] =  2.0234
+   R(c) [AT] =  0.9626
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.0234
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TPM2+G
+   partition = 010212
+   -lnL = 15510.1365
+   K = 57
+   R(a) [AC] =  0.9850
+   R(b) [AG] =  2.2094
+   R(c) [AT] =  0.9850
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.2094
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7010 
+ 
+   Model = TPM2+I+G
+   partition = 010212
+   -lnL = 15510.0465
+   K = 58
+   R(a) [AC] =  0.9850
+   R(b) [AG] =  2.2244
+   R(c) [AT] =  0.9850
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.2244
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.7070 
+ 
+   Model = TPM2uf
+   partition = 010212
+   -lnL = 15517.5111
+   K = 59
+   freqA = 0.2693 
+   freqC = 0.2192 
+   freqG = 0.2106 
+   freqT = 0.3009 
+   R(a) [AC] =  0.8377
+   R(b) [AG] =  1.8614
+   R(c) [AT] =  0.8377
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  1.8614
+   R(f) [GT] =  1.0000 
+ 
+   Model = TPM2uf+I
+   partition = 010212
+   -lnL = 15504.0469
+   K = 60
+   freqA = 0.2692 
+   freqC = 0.2192 
+   freqG = 0.2106 
+   freqT = 0.3011 
+   R(a) [AC] =  0.8391
+   R(b) [AG] =  1.8943
+   R(c) [AT] =  0.8391
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  1.8943
+   R(f) [GT] =  1.0000
+   p-inv = 0.0220 
+ 
+   Model = TPM2uf+G
+   partition = 010212
+   -lnL = 15449.1146
+   K = 60
+   freqA = 0.2683 
+   freqC = 0.2203 
+   freqG = 0.2114 
+   freqT = 0.3000 
+   R(a) [AC] =  0.8132
+   R(b) [AG] =  2.0079
+   R(c) [AT] =  0.8132
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.0079
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7700 
+ 
+   Model = TPM2uf+I+G
+   partition = 010212
+   -lnL = 15449.6660
+   K = 61
+   freqA = 0.2684 
+   freqC = 0.2200 
+   freqG = 0.2117 
+   freqT = 0.2999 
+   R(a) [AC] =  0.8107
+   R(b) [AG] =  1.9874
+   R(c) [AT] =  0.8107
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  1.9874
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.8190 
+ 
+   Model = TPM3
+   partition = 012012
+   -lnL = 15581.4240
+   K = 56
+   R(a) [AC] =  1.1087
+   R(b) [AG] =  2.1432
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1087
+   R(e) [CT] =  2.1432
+   R(f) [GT] =  1.0000 
+ 
+   Model = TPM3+I
+   partition = 012012
+   -lnL = 15568.2315
+   K = 57
+   R(a) [AC] =  1.1007
+   R(b) [AG] =  2.1712
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1007
+   R(e) [CT] =  2.1712
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TPM3+G
+   partition = 012012
+   -lnL = 15508.9729
+   K = 57
+   R(a) [AC] =  1.1186
+   R(b) [AG] =  2.3761
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1186
+   R(e) [CT] =  2.3761
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7120 
+ 
+   Model = TPM3+I+G
+   partition = 012012
+   -lnL = 15508.9796
+   K = 58
+   R(a) [AC] =  1.1185
+   R(b) [AG] =  2.3761
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1185
+   R(e) [CT] =  2.3761
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.7120 
+ 
+   Model = TPM3uf
+   partition = 012012
+   -lnL = 15506.1786
+   K = 59
+   freqA = 0.2639 
+   freqC = 0.2115 
+   freqG = 0.2126 
+   freqT = 0.3119 
+   R(a) [AC] =  1.4392
+   R(b) [AG] =  2.4601
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.4392
+   R(e) [CT] =  2.4601
+   R(f) [GT] =  1.0000 
+ 
+   Model = TPM3uf+I
+   partition = 012012
+   -lnL = 15497.0028
+   K = 60
+   freqA = 0.2646 
+   freqC = 0.2128 
+   freqG = 0.2119 
+   freqT = 0.3108 
+   R(a) [AC] =  1.4431
+   R(b) [AG] =  2.4954
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.4431
+   R(e) [CT] =  2.4954
+   R(f) [GT] =  1.0000
+   p-inv = 0.0210 
+ 
+   Model = TPM3uf+G
+   partition = 012012
+   -lnL = 15438.1160
+   K = 60
+   freqA = 0.2623 
+   freqC = 0.2121 
+   freqG = 0.2140 
+   freqT = 0.3116 
+   R(a) [AC] =  1.5522
+   R(b) [AG] =  2.7998
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.5522
+   R(e) [CT] =  2.7998
+   R(f) [GT] =  1.0000
+   gamma shape = 2.8080 
+ 
+   Model = TPM3uf+I+G
+   partition = 012012
+   -lnL = 15438.7555
+   K = 61
+   freqA = 0.2624 
+   freqC = 0.2121 
+   freqG = 0.2139 
+   freqT = 0.3116 
+   R(a) [AC] =  1.5545
+   R(b) [AG] =  2.8070
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.5545
+   R(e) [CT] =  2.8070
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.7930 
+ 
+   Model = TIM1ef
+   partition = 012230
+   -lnL = 15566.4759
+   K = 57
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7410
+   R(c) [AT] =  1.0643
+   R(d) [CG] =  1.0643
+   R(e) [CT] =  2.4863
+   R(f) [GT] =  1.0000 
+ 
+   Model = TIM1ef+I
+   partition = 012230
+   -lnL = 15552.0465
+   K = 58
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7546
+   R(c) [AT] =  1.0644
+   R(d) [CG] =  1.0644
+   R(e) [CT] =  2.5582
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TIM1ef+G
+   partition = 012230
+   -lnL = 15493.0612
+   K = 58
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.8355
+   R(c) [AT] =  1.0564
+   R(d) [CG] =  1.0564
+   R(e) [CT] =  2.8088
+   R(f) [GT] =  1.0000
+   gamma shape = 2.6760 
+ 
+   Model = TIM1ef+I+G
+   partition = 012230
+   -lnL = 15493.0648
+   K = 59
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.8352
+   R(c) [AT] =  1.0564
+   R(d) [CG] =  1.0564
+   R(e) [CT] =  2.8089
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.6800 
+ 
+   Model = TIM1
+   partition = 012230
+   -lnL = 15506.2060
+   K = 60
+   freqA = 0.2744 
+   freqC = 0.2123 
+   freqG = 0.2209 
+   freqT = 0.2924 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7665
+   R(c) [AT] =  1.0743
+   R(d) [CG] =  1.0743
+   R(e) [CT] =  2.5198
+   R(f) [GT] =  1.0000 
+ 
+   Model = TIM1+I
+   partition = 012230
+   -lnL = 15494.6364
+   K = 61
+   freqA = 0.2744 
+   freqC = 0.2134 
+   freqG = 0.2206 
+   freqT = 0.2917 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.7879
+   R(c) [AT] =  1.0800
+   R(d) [CG] =  1.0800
+   R(e) [CT] =  2.5446
+   R(f) [GT] =  1.0000
+   p-inv = 0.0220 
+ 
+   Model = TIM1+G
+   partition = 012230
+   -lnL = 15439.6501
+   K = 61
+   freqA = 0.2735 
+   freqC = 0.2132 
+   freqG = 0.2234 
+   freqT = 0.2899 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.8250
+   R(c) [AT] =  1.0738
+   R(d) [CG] =  1.0738
+   R(e) [CT] =  2.7897
+   R(f) [GT] =  1.0000
+   gamma shape = 2.8870 
+ 
+   Model = TIM1+I+G
+   partition = 012230
+   -lnL = 15439.6566
+   K = 62
+   freqA = 0.2735 
+   freqC = 0.2132 
+   freqG = 0.2234 
+   freqT = 0.2899 
+   R(a) [AC] =  1.0000
+   R(b) [AG] =  1.8245
+   R(c) [AT] =  1.0736
+   R(d) [CG] =  1.0736
+   R(e) [CT] =  2.7886
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.8920 
+ 
+   Model = TIM2ef
+   partition = 010232
+   -lnL = 15566.7034
+   K = 57
+   R(a) [AC] =  0.9716
+   R(b) [AG] =  1.6629
+   R(c) [AT] =  0.9716
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.3746
+   R(f) [GT] =  1.0000 
+ 
+   Model = TIM2ef+I
+   partition = 010232
+   -lnL = 15552.3008
+   K = 58
+   R(a) [AC] =  0.9773
+   R(b) [AG] =  1.6808
+   R(c) [AT] =  0.9773
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.4500
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TIM2ef+G
+   partition = 010232
+   -lnL = 15493.2554
+   K = 58
+   R(a) [AC] =  0.9905
+   R(b) [AG] =  1.7772
+   R(c) [AT] =  0.9905
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.7197
+   R(f) [GT] =  1.0000
+   gamma shape = 2.6720 
+ 
+   Model = TIM2ef+I+G
+   partition = 010232
+   -lnL = 15493.2592
+   K = 59
+   R(a) [AC] =  0.9906
+   R(b) [AG] =  1.7770
+   R(c) [AT] =  0.9906
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.7199
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.6760 
+ 
+   Model = TIM2
+   partition = 010232
+   -lnL = 15503.3511
+   K = 60
+   freqA = 0.2790 
+   freqC = 0.2118 
+   freqG = 0.2173 
+   freqT = 0.2919 
+   R(a) [AC] =  0.8440
+   R(b) [AG] =  1.5565
+   R(c) [AT] =  0.8440
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.2356
+   R(f) [GT] =  1.0000 
+ 
+   Model = TIM2+I
+   partition = 010232
+   -lnL = 15491.4595
+   K = 61
+   freqA = 0.2794 
+   freqC = 0.2128 
+   freqG = 0.2167 
+   freqT = 0.2911 
+   R(a) [AC] =  0.8325
+   R(b) [AG] =  1.5603
+   R(c) [AT] =  0.8325
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.2361
+   R(f) [GT] =  1.0000
+   p-inv = 0.0220 
+ 
+   Model = TIM2+G
+   partition = 010232
+   -lnL = 15437.0498
+   K = 61
+   freqA = 0.2793 
+   freqC = 0.2127 
+   freqG = 0.2186 
+   freqT = 0.2894 
+   R(a) [AC] =  0.8119
+   R(b) [AG] =  1.6062
+   R(c) [AT] =  0.8119
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.4448
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7880 
+ 
+   Model = TIM2+I+G
+   partition = 010232
+   -lnL = 15436.7636
+   K = 62
+   freqA = 0.2789 
+   freqC = 0.2127 
+   freqG = 0.2190 
+   freqT = 0.2894 
+   R(a) [AC] =  0.8210
+   R(b) [AG] =  1.5924
+   R(c) [AT] =  0.8210
+   R(d) [CG] =  1.0000
+   R(e) [CT] =  2.4418
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.8850 
+ 
+   Model = TIM3ef
+   partition = 012032
+   -lnL = 15564.9629
+   K = 57
+   R(a) [AC] =  1.1372
+   R(b) [AG] =  1.8097
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1372
+   R(e) [CT] =  2.5992
+   R(f) [GT] =  1.0000 
+ 
+   Model = TIM3ef+I
+   partition = 012032
+   -lnL = 15551.1600
+   K = 58
+   R(a) [AC] =  1.1160
+   R(b) [AG] =  1.7968
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1160
+   R(e) [CT] =  2.6293
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TIM3ef+G
+   partition = 012032
+   -lnL = 15491.6633
+   K = 58
+   R(a) [AC] =  1.1482
+   R(b) [AG] =  1.9270
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1482
+   R(e) [CT] =  2.9643
+   R(f) [GT] =  1.0000
+   gamma shape = 2.6860 
+ 
+   Model = TIM3ef+I+G
+   partition = 012032
+   -lnL = 15491.6691
+   K = 59
+   R(a) [AC] =  1.1482
+   R(b) [AG] =  1.9268
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.1482
+   R(e) [CT] =  2.9642
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.6900 
+ 
+   Model = TIM3
+   partition = 012032
+   -lnL = 15494.0341
+   K = 60
+   freqA = 0.2730 
+   freqC = 0.2066 
+   freqG = 0.2194 
+   freqT = 0.3010 
+   R(a) [AC] =  1.4392
+   R(b) [AG] =  2.0499
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.4392
+   R(e) [CT] =  2.8983
+   R(f) [GT] =  1.0000 
+ 
+   Model = TIM3+I
+   partition = 012032
+   -lnL = 15486.3102
+   K = 61
+   freqA = 0.2732 
+   freqC = 0.2078 
+   freqG = 0.2184 
+   freqT = 0.3006 
+   R(a) [AC] =  1.4458
+   R(b) [AG] =  2.1191
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.4458
+   R(e) [CT] =  2.9538
+   R(f) [GT] =  1.0000
+   p-inv = 0.0210 
+ 
+   Model = TIM3+G
+   partition = 012032
+   -lnL = 15425.4782
+   K = 61
+   freqA = 0.2726 
+   freqC = 0.2057 
+   freqG = 0.2218 
+   freqT = 0.2999 
+   R(a) [AC] =  1.5853
+   R(b) [AG] =  2.2781
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.5853
+   R(e) [CT] =  3.4588
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7880 
+ 
+   Model = TIM3+I+G
+   partition = 012032
+   -lnL = 15426.1138
+   K = 62
+   freqA = 0.2727 
+   freqC = 0.2057 
+   freqG = 0.2217 
+   freqT = 0.2999 
+   R(a) [AC] =  1.5879
+   R(b) [AG] =  2.2847
+   R(c) [AT] =  1.0000
+   R(d) [CG] =  1.5879
+   R(e) [CT] =  3.4693
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.7720 
+ 
+   Model = TVMef
+   partition = 012314
+   -lnL = 15580.9731
+   K = 58
+   R(a) [AC] =  1.0727
+   R(b) [AG] =  2.1744
+   R(c) [AT] =  1.0281
+   R(d) [CG] =  1.1757
+   R(e) [CT] =  2.1744
+   R(f) [GT] =  1.0000 
+ 
+   Model = TVMef+I
+   partition = 012314
+   -lnL = 15567.7705
+   K = 59
+   R(a) [AC] =  1.0637
+   R(b) [AG] =  2.2033
+   R(c) [AT] =  1.0282
+   R(d) [CG] =  1.1687
+   R(e) [CT] =  2.2033
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = TVMef+G
+   partition = 012314
+   -lnL = 15508.9473
+   K = 59
+   R(a) [AC] =  1.0966
+   R(b) [AG] =  2.3993
+   R(c) [AT] =  1.0390
+   R(d) [CG] =  1.1716
+   R(e) [CT] =  2.3993
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7110 
+ 
+   Model = TVMef+I+G
+   partition = 012314
+   -lnL = 15508.7780
+   K = 60
+   R(a) [AC] =  1.1021
+   R(b) [AG] =  2.4203
+   R(c) [AT] =  1.0375
+   R(d) [CG] =  1.1758
+   R(e) [CT] =  2.4203
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.7170 
+ 
+   Model = TVM
+   partition = 012314
+   -lnL = 15503.2214
+   K = 61
+   freqA = 0.2690 
+   freqC = 0.2110 
+   freqG = 0.2088 
+   freqT = 0.3112 
+   R(a) [AC] =  1.2028
+   R(b) [AG] =  2.3428
+   R(c) [AT] =  0.9100
+   R(d) [CG] =  1.5749
+   R(e) [CT] =  2.3428
+   R(f) [GT] =  1.0000 
+ 
+   Model = TVM+I
+   partition = 012314
+   -lnL = 15490.5616
+   K = 62
+   freqA = 0.2688 
+   freqC = 0.2115 
+   freqG = 0.2085 
+   freqT = 0.3112 
+   R(a) [AC] =  1.1951
+   R(b) [AG] =  2.3686
+   R(c) [AT] =  0.9127
+   R(d) [CG] =  1.5764
+   R(e) [CT] =  2.3686
+   R(f) [GT] =  1.0000
+   p-inv = 0.0210 
+ 
+   Model = TVM+G
+   partition = 012314
+   -lnL = 15433.9317
+   K = 62
+   freqA = 0.2678 
+   freqC = 0.2111 
+   freqG = 0.2093 
+   freqT = 0.3118 
+   R(a) [AC] =  1.2569
+   R(b) [AG] =  2.6076
+   R(c) [AT] =  0.8608
+   R(d) [CG] =  1.6731
+   R(e) [CT] =  2.6076
+   R(f) [GT] =  1.0000
+   gamma shape = 2.8080 
+ 
+   Model = TVM+I+G
+   partition = 012314
+   -lnL = 15434.4279
+   K = 63
+   freqA = 0.2680 
+   freqC = 0.2111 
+   freqG = 0.2092 
+   freqT = 0.3117 
+   R(a) [AC] =  1.2538
+   R(b) [AG] =  2.6098
+   R(c) [AT] =  0.8581
+   R(d) [CG] =  1.6772
+   R(e) [CT] =  2.6098
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.8000 
+ 
+   Model = SYM
+   partition = 012345
+   -lnL = 15564.7918
+   K = 59
+   R(a) [AC] =  1.0992
+   R(b) [AG] =  1.8226
+   R(c) [AT] =  1.0315
+   R(d) [CG] =  1.1989
+   R(e) [CT] =  2.6160
+   R(f) [GT] =  1.0000 
+ 
+   Model = SYM+I
+   partition = 012345
+   -lnL = 15550.8002
+   K = 60
+   R(a) [AC] =  1.0911
+   R(b) [AG] =  1.8315
+   R(c) [AT] =  1.0379
+   R(d) [CG] =  1.1824
+   R(e) [CT] =  2.6786
+   R(f) [GT] =  1.0000
+   p-inv = 0.0230 
+ 
+   Model = SYM+G
+   partition = 012345
+   -lnL = 15491.4792
+   K = 60
+   R(a) [AC] =  1.1379
+   R(b) [AG] =  1.9680
+   R(c) [AT] =  1.0442
+   R(d) [CG] =  1.2064
+   R(e) [CT] =  3.0257
+   R(f) [GT] =  1.0000
+   gamma shape = 2.6910 
+ 
+   Model = SYM+I+G
+   partition = 012345
+   -lnL = 15491.4848
+   K = 61
+   R(a) [AC] =  1.1382
+   R(b) [AG] =  1.9679
+   R(c) [AT] =  1.0439
+   R(d) [CG] =  1.2071
+   R(e) [CT] =  3.0278
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.6930 
+ 
+   Model = GTR
+   partition = 012345
+   -lnL = 15489.5379
+   K = 62
+   freqA = 0.2784 
+   freqC = 0.2055 
+   freqG = 0.2151 
+   freqT = 0.3010 
+   R(a) [AC] =  1.2135
+   R(b) [AG] =  1.9610
+   R(c) [AT] =  0.9164
+   R(d) [CG] =  1.5850
+   R(e) [CT] =  2.7947
+   R(f) [GT] =  1.0000 
+ 
+   Model = GTR+I
+   partition = 012345
+   -lnL = 15478.7965
+   K = 63
+   freqA = 0.2787 
+   freqC = 0.2067 
+   freqG = 0.2144 
+   freqT = 0.3002 
+   R(a) [AC] =  1.1853
+   R(b) [AG] =  1.9635
+   R(c) [AT] =  0.9065
+   R(d) [CG] =  1.5745
+   R(e) [CT] =  2.7831
+   R(f) [GT] =  1.0000
+   p-inv = 0.0210 
+ 
+   Model = GTR+G
+   partition = 012345
+   -lnL = 15421.0792
+   K = 63
+   freqA = 0.2788 
+   freqC = 0.2047 
+   freqG = 0.2166 
+   freqT = 0.2999 
+   R(a) [AC] =  1.2878
+   R(b) [AG] =  2.1216
+   R(c) [AT] =  0.8635
+   R(d) [CG] =  1.7089
+   R(e) [CT] =  3.2313
+   R(f) [GT] =  1.0000
+   gamma shape = 2.7970 
+ 
+   Model = GTR+I+G
+   partition = 012345
+   -lnL = 15421.5547
+   K = 64
+   freqA = 0.2790 
+   freqC = 0.2047 
+   freqG = 0.2164 
+   freqT = 0.2999 
+   R(a) [AC] =  1.2837
+   R(b) [AG] =  2.1228
+   R(c) [AT] =  0.8602
+   R(d) [CG] =  1.7128
+   R(e) [CT] =  3.2320
+   R(f) [GT] =  1.0000
+   p-inv = 0.0000
+   gamma shape = 2.7870 
+ 
+
+Computation of likelihood scores completed. It took 00h:12:10:00.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PHYML(5)>
+PHYML(5)>
+PHYML(5)>
+PHYML(5)>
+PHYML(5)>
+PHYML(5)>
+PHYML(5)>                                 ..........................                                      
+PHYML(5)> ooooooooooooooooooooooooooooo        CURRENT SETTINGS        ooooooooooooooooooooooooooooooooooo
+PHYML(5)>                                 ..........................                                      
+PHYML(5)>
+PHYML(5)>                . Sequence filename:				 jmodeltest3133206225384728260.phy
+PHYML(5)>                . Data type:					 dna
+PHYML(5)>                . Alphabet size:				 4
+PHYML(5)>                . Sequence format:				 interleaved
+PHYML(5)>                . Number of data sets:				 1
+PHYML(5)>                . Nb of bootstrapped data sets:			 0
+PHYML(5)>                . Model name:					 Custom
+PHYML(5)>                . Proportion of invariable sites:		 estimated
+PHYML(5)>                . Number of subst. rate categs:			 4
+PHYML(5)>                . Gamma distribution parameter:			 estimated
+PHYML(5)>                . 'Middle' of each rate class:			 mean
+PHYML(5)>                . Nucleotide equilibrium frequencies:		 ML
+PHYML(5)>                . Optimise tree topology:			 yes
+PHYML(5)>                . Tree topology search:				 NNIs
+PHYML(5)>                . Starting tree:				 BioNJ
+PHYML(5)>                . Add random input tree:			 no
+PHYML(5)>                . Optimise branch lengths:			 yes
+PHYML(5)>                . Optimise substitution model parameters:	 yes
+PHYML(5)>                . Run ID:					 TrN+I+G
+PHYML(5)>                . Random seed:					 1435147598
+PHYML(5)>                . Subtree patterns aliasing:			 no
+PHYML(5)>                . Version:					 20130103
+PHYML(5)>
+PHYML(5)> oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+PHYML(5)>
+PHYML(5)>
+PHYML(5)>
+PHYML(4)>
+PHYML(4)>
+PHYML(4)>
+PHYML(4)>
+PHYML(4)>
+PHYML(5)>. 1111 patterns found (out of a total of 2609 sites). 
+PHYML(4)>
+PHYML(4)>                                 ..........................                                      
+PHYML(4)> ooooooooooooooooooooooooooooo        CURRENT SETTINGS        ooooooooooooooooooooooooooooooooooo
+PHYML(4)>                                 ..........................                                      
+PHYML(4)>
+PHYML(4)>                . Sequence filename:				 jmodeltest3133206225384728260.phy
+PHYML(4)>                . Data type:					 dna
+PHYML(4)>                . Alphabet size:				 4
+PHYML(4)>                . Sequence format:				 interleaved
+PHYML(4)>                . Number of data sets:				 1
+PHYML(4)>                . Nb of bootstrapped data sets:			 0
+PHYML(4)>                . Model name:					 Custom
+PHYML(4)>                . Proportion of invariable sites:		 estimated
+PHYML(4)>                . Number of subst. rate categs:			 4
+PHYML(4)>                . Gamma distribution parameter:			 estimated
+PHYML(4)>                . 'Middle' of each rate class:			 mean
+PHYML(4)>                . Nucleotide equilibrium frequencies:		 ML
+PHYML(4)>                . Optimise tree topology:			 yes
+PHYML(4)>                . Tree topology search:				 NNIs
+PHYML(4)>                . Starting tree:				 BioNJ
+PHYML(4)>                . Add random input tree:			 no
+PHYML(4)>                . Optimise branch lengths:			 yes
+PHYML(4)>                . Optimise substitution model parameters:	 yes
+PHYML(4)>                . Run ID:					 F81+I+G
+PHYML(4)>                . Random seed:					 1435147598
+PHYML(4)>                . Subtree patterns aliasing:			 no
+PHYML(4)>                . Version:					 20130103
+PHYML(4)>
+PHYML(4)> oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+PHYML(4)>
+PHYML(4)>
+PHYML(4)>
+PHYML(4)>. 1111 patterns found (out of a total of 2609 sites). 
+PHYML(4)>
+PHYML(4)>. 1266 sites without polymorphism (48.52%).
+PHYML(4)>
+PHYML(5)>
+PHYML(6)>
+PHYML(5)>. 1266 sites without polymorphism (48.52%).
+PHYML(6)>
+PHYML(4)>. Computing pairwise distances...
+PHYML(4)>
+PHYML(4)>. Building BioNJ tree...
+PHYML(4)>
+PHYML(4)>. This analysis requires at least 14 Mo of memory space.
+PHYML(4)>
+PHYML(4)>. Refining the input tree...
+PHYML(5)>
+PHYML(6)>
+PHYML(8)>
+PHYML(5)>. Computing pairwise distances...
+PHYML(6)>
+PHYML(8)>
+PHYML(5)>
+PHYML(6)>
+PHYML(8)>
+PHYML(8)>
+PHYML(8)>
+PHYML(8)>
+PHYML(8)>                                 ..........................                                      
+PHYML(8)> ooooooooooooooooooooooooooooo        CURRENT SETTINGS        ooooooooooooooooooooooooooooooooooo
+PHYML(8)>                                 ..........................                                      
+PHYML(8)>
+PHYML(8)>                . Sequence filename:				 jmodeltest3133206225384728260.phy
+PHYML(8)>                . Data type:					 dna
+PHYML(8)>                . Alphabet size:				 4
+PHYML(8)>                . Sequence format:				 interleaved
+PHYML(8)>                . Number of data sets:				 1
+PHYML(8)>                . Nb of bootstrapped data sets:			 0
+PHYML(8)>                . Model name:					 Custom
+PHYML(8)>                . Proportion of invariable sites:		 estimated
+PHYML(8)>                . Number of subst. rate categs:			 4
+PHYML(8)>                . Gamma distribution parameter:			 estimated
+PHYML(8)>                . 'Middle' of each rate class:			 mean
+PHYML(8)>                . Nucleotide equilibrium frequencies:		 ML
+PHYML(8)>                . Optimise tree topology:			 yes
+PHYML(8)>                . Tree topology search:				 NNIs
+PHYML(8)>                . Starting tree:				 BioNJ
+PHYML(8)>                . Add random input tree:			 no
+PHYML(5)>. Building BioNJ tree...
+PHYML(6)>
+PHYML(8)>                . Optimise branch lengths:			 yes
+PHYML(5)>
+PHYML(5)>. This analysis requires at least 14 Mo of memory space.
+PHYML(5)>
+PHYML(5)>. Refining the input tree...
+PHYML(6)>                                 ..........................                                      
+PHYML(8)>                . Optimise substitution model parameters:	 yes
+PHYML(8)>                . Run ID:					 TPM1uf+I+G
+PHYML(8)>                . Random seed:					 1435147598
+PHYML(8)>                . Subtree patterns aliasing:			 no
+PHYML(8)>                . Version:					 20130103
+PHYML(8)>
+PHYML(8)> oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+PHYML(8)>
+PHYML(8)>
+PHYML(8)>
+PHYML(8)>. 1111 patterns found (out of a total of 2609 sites). 
+PHYML(8)>
+PHYML(8)>. 1266 sites without polymorphism (48.52%).
+PHYML(8)>
+PHYML(8)>. Computing pairwise distances...
+PHYML(8)>
+PHYML(8)>. Building BioNJ tree...
+PHYML(8)>
+PHYML(8)>. This analysis requires at least 14 Mo of memory space.
+PHYML(6)> ooooooooooooooooooooooooooooo        CURRENT SETTINGS        ooooooooooooooooooooooooooooooooooo
+PHYML(6)>                                 ..........................                                      
+PHYML(6)>
+PHYML(6)>                . Sequence filename:				 jmodeltest3133206225384728260.phy
+PHYML(6)>                . Data type:					 dna
+PHYML(6)>                . Alphabet size:				 4
+PHYML(6)>                . Sequence format:				 interleaved
+PHYML(6)>                . Number of data sets:				 1
+PHYML(6)>                . Nb of bootstrapped data sets:			 0
+PHYML(6)>                . Model name:					 Custom
+PHYML(6)>                . Proportion of invariable sites:		 estimated
+PHYML(6)>                . Number of subst. rate categs:			 4
+PHYML(6)>                . Gamma distribution parameter:			 estimated
+PHYML(6)>                . 'Middle' of each rate class:			 mean
+PHYML(6)>                . Nucleotide equilibrium frequencies:		 ML
+PHYML(6)>                . Optimise tree topology:			 yes
+PHYML(6)>                . Tree topology search:				 NNIs
+PHYML(6)>                . Starting tree:				 BioNJ
+PHYML(6)>                . Add random input tree:			 no
+PHYML(6)>                . Optimise branch lengths:			 yes
+PHYML(6)>                . Optimise substitution model parameters:	 yes
+PHYML(6)>                . Run ID:					 HKY+I+G
+PHYML(6)>                . Random seed:					 1435147598
+PHYML(6)>                . Subtree patterns aliasing:			 no
+PHYML(6)>                . Version:					 20130103
+PHYML(6)>
+PHYML(6)> oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+PHYML(6)>
+PHYML(6)>
+PHYML(6)>
+PHYML(6)>. 1111 patterns found (out of a total of 2609 sites). 
+PHYML(6)>
+PHYML(6)>. 1266 sites without polymorphism (48.52%).
+PHYML(6)>
+PHYML(6)>. Computing pairwise distances...
+PHYML(6)>
+PHYML(6)>. Building BioNJ tree...
+PHYML(6)>
+PHYML(6)>. This analysis requires at least 14 Mo of memory space.
+PHYML(6)>
+PHYML(6)>. Refining the input tree...
+PHYML(8)>
+PHYML(8)>. Refining the input tree...
+PHYML(6)>
+PHYML(6)>. Maximizing likelihood (using NNI moves)...
+PHYML(4)>
+PHYML(4)>. Maximizing likelihood (using NNI moves)...
+PHYML(6)>
+PHYML(8)>
+PHYML(8)>. Maximizing likelihood (using NNI moves)...
+PHYML(5)>
+PHYML(5)>. Maximizing likelihood (using NNI moves)...
+PHYML(8)>
+PHYML(5)>
+PHYML(4)>
+PHYML(4)>. (    4 sec) [    -15583.9022] [Alpha              ][  2.953486]
+PHYML(6)>. (    3 sec) [    -15471.9396] [GTR parameters     ]
+PHYML(6)>. (    4 sec) [    -15453.9040] [Alpha              ][  2.737493]
+PHYML(8)>. (    3 sec) [    -15473.6609] [GTR parameters     ]
+PHYML(8)>. (    4 sec) [    -15454.0071] [Alpha              ][  2.707143]
+PHYML(4)>. (    4 sec) [    -15583.9022] [P-inv              ][  0.000196]
+PHYML(5)>. (    3 sec) [    -15461.1630] [GTR parameters     ]
+PHYML(5)>. (    5 sec) [    -15441.9177] [Alpha              ][  2.674181]
+PHYML(6)>. (    4 sec) [    -15453.9040] [P-inv              ][  0.000100]
+PHYML(4)>. (    5 sec) [    -15583.8987] [Nucleotide freqs.  ]
+PHYML(6)>. (    5 sec) [    -15453.8932] [Nucleotide freqs.  ]
+PHYML(8)>. (    4 sec) [    -15454.0071] [P-inv              ][  0.000100]
+PHYML(8)>. (    5 sec) [    -15453.9883] [Nucleotide freqs.  ]
+PHYML(5)>. (    5 sec) [    -15441.9177] [P-inv              ][  0.000100]
+PHYML(5)>. (    5 sec) [    -15441.8231] [Nucleotide freqs.  ]
+PHYML(4)>. (    5 sec) [    -15583.8987] [Topology           ][# nnis=  0]
+PHYML(6)>. (    5 sec) [    -15453.8932] [Topology           ][# nnis=  0]
+PHYML(8)>. (    5 sec) [    -15453.9883] [Topology           ][# nnis=  0]
+PHYML(5)>. (    5 sec) [    -15441.8231] [Topology           ][# nnis=  0]
+PHYML(4)>. (    6 sec) [    -15583.2226] [Topology           ][# nnis=  0]
+PHYML(4)>. (    7 sec) [    -15583.1166] [Topology           ]
+PHYML(6)>. (    6 sec) [    -15453.3219] [Topology           ][# nnis=  0]
+PHYML(6)>. (    7 sec) [    -15453.2197] [Topology           ]
+PHYML(8)>. (    6 sec) [    -15453.1502] [Topology           ][# nnis=  0]
+PHYML(8)>. (    7 sec) [    -15453.0275] [Topology           ]
+PHYML(5)>. (    6 sec) [    -15441.0602] [Topology           ][# nnis=  0]
+PHYML(5)>. (    7 sec) [    -15440.9344] [Topology           ]
+PHYML(6)>. (    7 sec) [    -15453.2197] [Branch lengths     ]
+PHYML(8)>. (    7 sec) [    -15453.0275] [Branch lengths     ]
+PHYML(5)>. (    7 sec) [    -15440.9344] [Branch lengths     ]
+PHYML(4)>. (    7 sec) [    -15583.1166] [Branch lengths     ]
+PHYML(4)>. (    9 sec) [    -15583.0294] [Alpha              ][  3.034889]
+PHYML(6)>. (    7 sec) [    -15453.1370] [GTR parameters     ]
+PHYML(6)>. (    9 sec) [    -15453.0650] [Alpha              ][  2.807804]
+PHYML(4)>. (    9 sec) [    -15583.0294] [P-inv              ][  0.000100]
+PHYML(4)>. (    9 sec) [    -15583.0293] [Nucleotide freqs.  ]
+PHYML(6)>. (    9 sec) [    -15453.0650] [P-inv              ][  0.000100]
+PHYML(6)>. (    9 sec) [    -15453.0641] [Nucleotide freqs.  ]
+PHYML(8)>. (    8 sec) [    -15452.8202] [GTR parameters     ]
+PHYML(8)>. (    9 sec) [    -15452.7268] [Alpha              ][  2.810434]
+PHYML(5)>. (    8 sec) [    -15440.7516] [GTR parameters     ]
+PHYML(5)>. (    9 sec) [    -15440.6481] [Alpha              ][  2.769469]
+PHYML(8)>. (    9 sec) [    -15452.7268] [P-inv              ][  0.000100]
+PHYML(8)>. (    9 sec) [    -15452.7202] [Nucleotide freqs.  ]
+PHYML(6)>. (    9 sec) [    -15453.0641] [Branch lengths     ]
+PHYML(5)>. (    9 sec) [    -15440.6481] [P-inv              ][  0.000100]
+PHYML(5)>. (   10 sec) [    -15440.6409] [Nucleotide freqs.  ]
+PHYML(8)>. (   10 sec) [    -15452.7202] [Branch lengths     ]
+PHYML(5)>. (   10 sec) [    -15440.6409] [Branch lengths     ]
+PHYML(4)>. (    9 sec) [    -15583.0293] [Branch lengths     ]
+PHYML(4)>. (   11 sec) [    -15583.0263] [Alpha              ][  3.040962]
+PHYML(6)>. (   10 sec) [    -15453.0575] [GTR parameters     ]
+PHYML(6)>. (   11 sec) [    -15453.0487] [Alpha              ][  2.817834]
+PHYML(4)>. (   11 sec) [    -15583.0263] [P-inv              ][  0.000100]
+PHYML(4)>. (   11 sec) [    -15583.0263] [Nucleotide freqs.  ]
+PHYML(6)>. (   11 sec) [    -15453.0487] [P-inv              ][  0.000100]
+PHYML(6)>. (   11 sec) [    -15453.0487] [Nucleotide freqs.  ]
+PHYML(8)>. (   10 sec) [    -15452.7121] [GTR parameters     ]
+PHYML(8)>. (   11 sec) [    -15452.7041] [Alpha              ][  2.823741]
+PHYML(6)>. (   11 sec) [    -15453.0487] [Branch lengths     ]
+PHYML(8)>. (   11 sec) [    -15452.7041] [P-inv              ][  0.000100]
+PHYML(8)>. (   12 sec) [    -15452.7040] [Nucleotide freqs.  ]
+PHYML(5)>. (   11 sec) [    -15440.6301] [GTR parameters     ]
+PHYML(5)>. (   12 sec) [    -15440.6171] [Alpha              ][  2.782530]
+PHYML(5)>. (   12 sec) [    -15440.6171] [P-inv              ][  0.000100]
+PHYML(8)>. (   12 sec) [    -15452.7040] [Branch lengths     ]
+PHYML(5)>. (   12 sec) [    -15440.6171] [Nucleotide freqs.  ]
+PHYML(4)>. (   11 sec) [    -15583.0263] [Branch lengths     ]
+PHYML(4)>. (   13 sec) [    -15583.0260] [Alpha              ][  3.040962]
+PHYML(5)>. (   12 sec) [    -15440.6171] [Branch lengths     ]
+PHYML(6)>. (   12 sec) [    -15453.0459] [GTR parameters     ]
+PHYML(6)>. (   13 sec) [    -15453.0432] [Alpha              ][  2.817834]
+PHYML(4)>. (   13 sec) [    -15583.0260] [P-inv              ][  0.000100]
+PHYML(6)>. (   13 sec) [    -15453.0432] [P-inv              ][  0.000100]
+PHYML(6)>. (   13 sec) [    -15453.0432] [Nucleotide freqs.  ]
+PHYML(8)>. (   12 sec) [    -15452.7016] [GTR parameters     ]
+PHYML(8)>. (   14 sec) [    -15452.6992] [Alpha              ][  2.823741]
+PHYML(6)>. (   13 sec) [    -15453.0432] [Branch lengths     ]
+PHYML(8)>. (   14 sec) [    -15452.6992] [P-inv              ][  0.000100]
+PHYML(8)>. (   14 sec) [    -15452.6992] [Nucleotide freqs.  ]
+PHYML(5)>. (   13 sec) [    -15440.6128] [GTR parameters     ]
+PHYML(5)>. (   14 sec) [    -15440.6084] [Alpha              ][  2.782530]
+PHYML(4)>. (   13 sec) [    -15583.0260] [Nucleotide freqs.  ]
+PHYML(4)>. (   15 sec) [    -15583.0260] [Alpha              ][  3.040962]
+PHYML(8)>. (   14 sec) [    -15452.6992] [Branch lengths     ]
+PHYML(5)>. (   14 sec) [    -15440.6084] [P-inv              ][  0.000100]
+PHYML(5)>. (   15 sec) [    -15440.6084] [Nucleotide freqs.  ]
+PHYML(4)>. (   15 sec) [    -15583.0260] [P-inv              ][  0.000100]
+PHYML(4)>. (   15 sec) [    -15583.0260] [Nucleotide freqs.  ]
+PHYML(4)>
+PHYML(4)>. Checking for NNIs, optimizing five branches...
+PHYML(5)>. (   15 sec) [    -15440.6084] [Branch lengths     ]
+PHYML(6)>. (   14 sec) [    -15453.0428] [GTR parameters     ]
+PHYML(6)>. (   15 sec) [    -15453.0421] [Alpha              ][  2.817834]
+PHYML(6)>. (   15 sec) [    -15453.0421] [P-inv              ][  0.000100]
+PHYML(6)>. (   16 sec) [    -15453.0421] [Nucleotide freqs.  ]
+PHYML(8)>. (   15 sec) [    -15452.6989] [GTR parameters     ]
+PHYML(8)>. (   16 sec) [    -15452.6984] [Alpha              ][  2.823741]
+PHYML(6)>. (   16 sec) [    -15453.0421] [Branch lengths     ]
+PHYML(8)>. (   16 sec) [    -15452.6984] [P-inv              ][  0.000100]
+PHYML(8)>. (   16 sec) [    -15452.6984] [Nucleotide freqs.  ]
+PHYML(5)>. (   15 sec) [    -15440.6078] [GTR parameters     ]
+PHYML(5)>. (   17 sec) [    -15440.6066] [Alpha              ][  2.782530]
+PHYML(5)>. (   17 sec) [    -15440.6066] [P-inv              ][  0.000100]
+PHYML(5)>. (   17 sec) [    -15440.6066] [Nucleotide freqs.  ]
+PHYML(5)>. (   17 sec) [    -15440.6066] [Branch lengths     ]
+PHYML(6)>. (   16 sec) [    -15453.0419] [GTR parameters     ]
+PHYML(6)>. (   18 sec) [    -15453.0417] [Alpha              ][  2.817834]
+PHYML(8)>. (   16 sec) [    -15452.6984] [GTR parameters     ]
+PHYML(6)>. (   18 sec) [    -15453.0417] [P-inv              ][  0.000100]
+PHYML(8)>. (   18 sec) [    -15452.6980] [Alpha              ][  2.823741]
+PHYML(6)>. (   18 sec) [    -15453.0417] [Nucleotide freqs.  ]
+PHYML(8)>. (   18 sec) [    -15452.6980] [P-inv              ][  0.000100]
+PHYML(8)>. (   18 sec) [    -15452.6980] [Nucleotide freqs.  ]
+PHYML(8)>
+PHYML(8)>. Checking for NNIs, optimizing five branches...
+PHYML(5)>. (   18 sec) [    -15440.6061] [GTR parameters     ]
+PHYML(5)>. (   19 sec) [    -15440.6057] [Alpha              ][  2.782530]
+PHYML(5)>. (   19 sec) [    -15440.6057] [P-inv              ][  0.000100]
+PHYML(6)>. (   18 sec) [    -15453.0417] [GTR parameters     ]
+PHYML(6)>. (   19 sec) [    -15453.0416] [Alpha              ][  2.817834]
+PHYML(6)>. (   19 sec) [    -15453.0416] [P-inv              ][  0.000100]
+PHYML(6)>. (   19 sec) [    -15453.0416] [Nucleotide freqs.  ]
+PHYML(6)>
+PHYML(6)>. Checking for NNIs, optimizing five branches...
+PHYML(5)>. (   19 sec) [    -15440.6057] [Nucleotide freqs.  ]
+PHYML(5)>. (   20 sec) [    -15440.6057] [GTR parameters     ]
+PHYML(5)>. (   21 sec) [    -15440.6055] [Alpha              ][  2.782530]
+PHYML(5)>. (   21 sec) [    -15440.6055] [P-inv              ][  0.000100]
+PHYML(5)>. (   21 sec) [    -15440.6055] [Nucleotide freqs.  ]
+PHYML(5)>
+PHYML(5)>. Checking for NNIs, optimizing five branches...
+PHYML(4)>
+PHYML(4)>. (   28 sec) [    -15582.4791] [Topology           ]
+PHYML(4)>. (   28 sec) [    -15582.4791] [Branch lengths     ]
+PHYML(4)>. (   30 sec) [    -15582.3829] [Alpha              ][  3.076606]
+PHYML(4)>. (   30 sec) [    -15582.3829] [P-inv              ][  0.000100]
+PHYML(4)>. (   30 sec) [    -15582.3818] [Nucleotide freqs.  ]
+PHYML(8)>
+PHYML(8)>
+PHYML(8)>
+PHYML(8)>. Log likelihood of the current tree: -15452.698035.
+PHYML(8)>
+PHYML(8)>. Printing the most likely tree in file 'jmodeltest3133206225384728260.phy_phyml_tree_TPM1uf+I+G.txt'...
+PHYML(8)>
+PHYML(8)>. Time used 0h0m31s
+PHYML(8)>
+PHYML(8)>oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ 
+Command line used for process 8:
+    /home/p230198/GitHubs/Cadotte2013/jmodeltest2/dist/exe/phyml/PhyML_3.0_linux64  -i /home/p230198/GitHubs/Cadotte2013/Sequences.afa -d nt -n 1 -b 0 --run_id TPM1uf+I+G -m 012210 -f m -v e -c 4 -a e --no_memory_check -o tlr -s NNI
+ 
