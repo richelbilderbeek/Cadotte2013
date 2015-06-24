@@ -75,3 +75,7 @@ do
   echo item: ${sequences[i]}
   perl ncbi_search.pl -q ${sequences[i]} -o ${sequences[i]}.fasta -d nucleotide -r fasta -m 2000
 done
+
+wget http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux32.tar.gz
+
+tar zxvf muscle3.8.31_i86linux32.tar.gz -C MUSCLE
