@@ -19,7 +19,8 @@ Redoing research of 'Experimental evidence that evolutionary diverse assemblages
 ## Steps
 
  * Downloading the sequences: in the terminal, do `./Download.sh`
-
+ * Align the sequences: in the terminal, do `./Align.sh`
+ * Create the phylogeny: in the terminal, do `./CreatePhylogeny.sh`
 
 ## Other files
 
