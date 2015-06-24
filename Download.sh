@@ -72,10 +72,30 @@ declare -a sequences=(
 
 for (( i=0; i!=${#sequences[@]}; ++i ))
 do
-  echo item: ${sequences[i]}
-  perl ncbi_search.pl -q ${sequences[i]} -o ${sequences[i]}.fasta -d nucleotide -r fasta -m 2000
+  if [ ! -e ${sequences[i]}.fasta ]
+  then
+    echo Downloading: ${sequences[i]}
+    perl ncbi_search.pl -q ${sequences[i]} -o ${sequences[i]}.fasta -d nucleotide -r fasta -m 2000
+  fi
 done
 
-wget http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux32.tar.gz
+if [ ! -e muscle3.8.31_i86linux32.tar.gz ]
+then
+  echo Downloading MUSCLE
+  wget http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux32.tar.gz
+fi
 
-tar zxvf muscle3.8.31_i86linux32.tar.gz -C MUSCLE
+if [ ! -d MUSCLE ]
+then
+  echo Creating MUSCLE folder
+  mkdir MUSCLE
+fi
+
+if [ ! -e MUSCLE/muscle3.8.31_i86linux32 ]
+then
+  echo Unpacking MUSCLE
+  tar zxvf muscle3.8.31_i86linux32.tar.gz -C MUSCLE
+  cd MUSCLE
+  chmod +x muscle3.8.31_i86linux32
+fi
+
