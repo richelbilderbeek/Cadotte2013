@@ -70,6 +70,7 @@ declare -a sequences=(
 # echo "Number of sequences:"
 # echo ${#sequences[@]} #Number of elements in the array
 
+# Downloading sequences
 for (( i=0; i!=${#sequences[@]}; ++i ))
 do
   if [ ! -e ${sequences[i]}.fasta ]
@@ -79,12 +80,23 @@ do
   fi
 done
 
+# Merging sequences
+if [ ! -e Sequences.fasta ]
+then
+  for myfile in `ls *.fasta`
+  do
+    cat $myfile >> Sequences.fasta
+  done
+fi
+
+# Download MUSCLE
 if [ ! -e muscle3.8.31_i86linux32.tar.gz ]
 then
   echo Downloading MUSCLE
   wget http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux32.tar.gz
 fi
 
+# Unpacking MUSCLE
 if [ ! -d MUSCLE ]
 then
   echo Creating MUSCLE folder
@@ -98,4 +110,3 @@ then
   cd MUSCLE
   chmod +x muscle3.8.31_i86linux32
 fi
-
